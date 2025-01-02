@@ -39,15 +39,6 @@ export class InfrastructureStack extends Stack {
       },
     );
 
-    const localWebsiteServerLogStream = new logs.LogStream(
-      this,
-      "LocalWebsiteServerLogStream",
-      {
-        logGroup: websiteServerLogGroup,
-        removalPolicy: RemovalPolicy.DESTROY,
-      },
-    );
-
     const pipelineWebsiteServerLogStream = new logs.LogStream(
       this,
       "PipelineWebsiteServerLogStream",
@@ -77,7 +68,7 @@ export class InfrastructureStack extends Stack {
 
     const prodWebsiteServerLogStream = new logs.LogStream(
       this,
-      "ProdWebsiteServerLogStream",
+      "ProductionWebsiteServerLogStream",
       {
         logGroup: websiteServerLogGroup,
         removalPolicy: RemovalPolicy.DESTROY,

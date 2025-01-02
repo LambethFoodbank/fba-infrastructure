@@ -1,6 +1,7 @@
 # Infrastructure
 
 ## Prerequisite
+- AWS CLI
 - Node.js
 
 ## Get AWS credentials
@@ -10,6 +11,7 @@
 4. To check this has worked, run `aws s3 ls`. You will probably get a single line returned (something like `2024-05-16 11:13:28 cdk-xxxxxxxxx-assets-xxxxxxxxxxxx-eu-west-2`), but as long as it doesn't error you're probably connected. 
 
 ## Useful commands
+* `npm install` usual installation of dependencies
 * `npm run build` to compile typescript to js
 * `npm run watch` to watch for changes and compile
 * `npm run test` to perform the jest unit tests
