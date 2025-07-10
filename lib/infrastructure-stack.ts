@@ -74,5 +74,14 @@ export class InfrastructureStack extends Stack {
         removalPolicy: RemovalPolicy.DESTROY,
       },
     );
+
+    const internDevWebsiteServerLogStream = new logs.LogStream(
+      this,
+      "InternDevWebsiteServerLogStream",
+      {
+        logGroup: websiteServerLogGroup,
+        removalPolicy: RemovalPolicy.DESTROY,
+      },
+    );
   }
 }
